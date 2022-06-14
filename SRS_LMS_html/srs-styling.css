@@ -1,0 +1,191 @@
+
+
+/* Cover Pager Style Starts Here */
+
+.srs-cover{
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+  font-family: Arial;
+  text-align: right;
+  font-size: 14pt;
+  font-weight: bold;
+}
+  .bar{
+    margin-top: 1in;
+    height: 10px;
+    background: black;
+    position: static;
+  }
+
+  .SRS{
+    margin-top: 20pt;
+    font-size: 32pt;
+    font-weight: bold;
+  }
+
+  .for{
+    margin-top: 20pt;
+    font-weight: bold;
+    font-size: 20pt;
+  }
+
+  .moto{
+    font-style: italic;
+    font-size: 13pt;
+    font-weight: bolder;
+  }
+ /* Navigation Style Starts Here*/ 
+ 
+.nav-column {
+  list-style-type: none;
+  margin: 10;
+  padding: 0;
+  width: 230px;
+  background-color: #f1f1f1;
+   height: 100%;
+   position: fixed;
+   overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color:cornflowerblue;
+  color: white;
+}
+
+.nav-link{
+  font-size: 0.85rem;
+  font-weight: 500;
+  font-family: 'Gill Sans';
+  color: darkslateblue;
+
+}
+.sub-link{
+  margin-left: 10%;
+  font-size: small;
+  font-weight: 500;
+  font-family: sans-serif;
+  color:steelblue;
+}
+
+/* Navigation Style Ends */
+
+.main {
+    margin-left: 20%; 
+    margin-right: 20%;
+    margin-top: auto;
+    margin-bottom: auto;     
+  }
+
+.context{
+  width: 100%;
+  padding-left: 10px;
+  font-family: 'Times New Roman';
+}
+
+  /* Table of Content Styling */
+  
+  .TOC_h3{
+    color:rgb(0,0,0);
+    text-align:left;
+    margin-top:10px;
+    margin-left:10px;
+    font-size: 18pt;
+    font-weight: bold;
+  }
+
+  ol.c {
+    list-style-type: none;
+    margin-left:10px;
+    font-size:12pt;
+    font-weight: bold;
+  }
+
+  ul.a {
+    margin-top: -12px;
+    list-style-type: none;
+    font-size: 11pt;
+    margin-left:20px;
+  }
+
+  /* Table of Content Styling ends here */
+ 
+  /* headers and para styling */
+  
+  .intro_titles {
+    margin-left:10px;
+    font-weight: bold;
+    font-size: 18pt;
+  }
+
+  .titles {
+    margin-left:10px;
+    font-weight: bold;
+    font-size: 18pt;
+  }
+
+  .sub-titles{
+    margin-left:10px;
+    font-size: 14pt; 
+    font-weight: bold;
+  }
+
+  .pre-title{
+    font-size:12pt;
+    text-indent:30px;
+  }
+
+.body{
+   color:rgb(0,0,0);
+   text-align:left;
+   margin-top:10px;
+   margin-left:10px;
+   font-size:11pt;
+   text-indent:30px;
+   font-style: italic;
+   font-family: Arial;
+}
+
+.bullet-heads{
+  font-size:11pt;
+  margin-left:10px;
+  font-style: italic;
+  font-family: Arial;
+}
+
+  .bullets{
+   
+    color:rgb(0,0,0);
+    text-align:left;
+    margin-top:10px;
+    margin-left:10px;
+    font-size:11pt;
+    font-style: italic;
+    font-family: Arial;
+  }
+
+  table, th, td {
+			border: 1px solid black;
+      border-collapse: collapse;
+      width: 6.5in;
+      padding: 0.2cm;
+      font-size:11pt;
+      font-family: Arial;
+		}
+  
+    img {
+      display: block;
+      max-width: 80%;
+      max-height:80%;
+      position: relative;
+      width: auto;
+      height: auto;
+    }
+
+

@@ -1,0 +1,57 @@
+/*print stylesheet*/
+
+@media print {
+
+    *{
+        background: transparent!important;
+        color: #000!important;
+        box-shadow: none!important;
+        text-shadow: none!important; 
+ 
+ 
+    }
+    .nav-column,
+    .li a,
+    .li a:hover,
+    .nav-link,
+    .sub-link
+    {
+ 
+     display: none; 
+ 
+    }
+
+    @page{
+       size:8.5in 11in; 
+       margin-top: 2.54cm;
+       margin-bottom: 2.54cm;     
+    } 
+    .TOC_h3
+    {
+        page-break-before: always;
+        
+    }
+    
+    .bar{
+        display: -webkit-box;
+    }
+
+    .intro_titles{
+        page-break-before: always;
+    }
+ /*
+    .abc{
+       
+        page-break-before: always;
+      } */
+
+      .main{
+       margin-left: 2.54cm;
+       margin-right: 2.54cm;
+       
+      }
+    
+    .title-content{
+        page-break-inside: avoid;
+    }
+} 

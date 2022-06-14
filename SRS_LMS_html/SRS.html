@@ -1,0 +1,1672 @@
+<!doctype html>
+<html>
+<head>
+    <link rel= "stylesheet" href="srs-styling.css">
+    <link rel= "stylesheet" href="tocstyle.css">
+    <link rel="stylesheet" href="fancy.min.css"/>
+    <link rel= "stylesheet" href="stylesheetprint.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+   <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=goFnBcQpHVRVFReDm5qjkdr59yxoclrIrssd_sRJsrwrCn5eStQ9TqoGT2Y_H8gL7ptg9K5LEK9pPDu7_-NiTITY8PJuOQOmO1KKJvqUMfnbOUvyqGZg4C5ItmJDgAxXHEx70u6bYUsQdA57Enn_rGEUzURTanNp9Pon4dtB4-EKw4w1K-3NLL8g84bsWTMQzuzCdjkdpaU2EhQm2YPO3vGc2B_p9yvkv1tA3agLYqANYlXMreT7jOOdRbQ7ODXSqWTDnF6YQ6EDyvv9JrMYQK6hkN2TFEGweZoaSUSW7hpV78HY-4Y5K5Vi5HCwOGtZqIuzwPYgagvQN7gZFX9azvZo1ttsuQ-Y5N3raIs8cDGtlkRVRc63Dk0b5B-gdy7nL9GV6U6VDFc4_vVnF8LAbeo1zzgeZB5RwZd5f-sp-MXqVgkrOftc9firKkuyfEU2hfSyxfzerE2rpPSKIqkTUA" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9kb2MtMDAtNzgtZG9jcy5nb29nbGV1c2VyY29udGVudC5jb20vZG9jcy9zZWN1cmVzYy9nNTducnJiYWZxOGwxYms2OW90dG1ocXNjNjFzMDd1cy9oazk3NDB2MGoxcm05MjFiNWJlN2RpdmxybXNjdHRlZS8xNjA1NjI0Njc1MDAwLzAwNjUwNDY5NzYxMTAzODc1NDc3LzE1NDMzNzE4ODM3NTAwMjk2MjUzLzFmYXhBbEJVeGtaUGZiSFVEaWYzTWdnNEI2Yi1uVGtMbj9lPWRvd25sb2FkJmF1dGh1c2VyPTAmbm9uY2U9Y2lqN2F1bHVuam1hbyZ1c2VyPTE1NDMzNzE4ODM3NTAwMjk2MjUzJmhhc2g9amc4MmFwazRuYnBrdWI4b2E4bWZqdGRicTNhbWxyOWM"/></script>
+   
+   <title>SRS | CSE327</title>
+</head>
+
+
+<body>
+    <div class="full page">
+
+        <!--For Nav-->
+        <div class="srs-page">
+
+        <!--Navigation Starts Here-->
+           <section id="TOC">
+                <div class= "nav">
+                    <div id="contents">
+                   <ul class= "nav-column">
+                       <h5>Software Requirements Specification</h5>
+    
+                       <li class="nav-menu">
+                        <a class= "nav-link" href="#cov">Cover</a>
+                        </li>
+    
+                       <li class="nav-menu">
+                        <a class= "nav-link" href="#con">Table Of Contents</a>
+                        </li>
+       
+                       <li class="nav-menu">
+                           <a class= "nav-link" href="#RevHis">Revision History</a>
+                       </li>
+       
+                       <li class="nav-menu">
+                           <a class= "nav-link" data-toggle="collapse" href="#Intro">1. Introduction</a>
+                       </li>
+                       <div id="Intro" class="collapse" data-parent="#contents">
+                           <div class="navdrop">
+                         <li><a class= "sub-link" href="#1.1">1.1 Purpose</a></li>  
+                         <li><a class= "sub-link" href="#1.2">1.2 Document Conventions</a></li>  
+                         <li><a class= "sub-link" href="#1.3">1.3 Intended Audience and Reading Suggestions</a></li>  
+                         <li><a class= "sub-link" href="#1.4">1.4 Product Scope</a></li> 
+                         <li><a class= "sub-link" href="#1.5">1.5 References</a></li> 
+                           </div>
+                       </div>
+       
+                       <li class="nav-menu">
+                           <a class= "nav-link" data-toggle="collapse" href="#Overall_Des">2. Overall Description</a>
+                       </li>
+                       <div id="Overall_Des" class="collapse hide" data-parent="#contents">
+                           <div class="navdrop">
+                         <li><a class= "sub-link" href="#2.1">2.1 Product Perspective</a></li>  
+                         <li><a class= "sub-link" href="#2.2">2.2 Product Functions</a></li>  
+                         <li><a class= "sub-link" href="#2.3">2.3 User Classes and Characteristics</a></li>  
+                         <li><a class= "sub-link" href="#2.4">2.4 Operating Environment</a></li> 
+                         <li><a class= "sub-link" href="#2.5">2.5 Design and Implementation Constraints</a></li>
+                         <li><a class= "sub-link" href="#2.6">2.6 User Documentation</a></li>  
+                         <li><a class= "sub-link" href="#2.7">2.7 Assumptions and Dependencies</a></li>   
+                           </div>
+                       </div>
+       
+                       <li class="nav-menu">
+                           <a class= "nav-link" data-toggle="collapse" href="#EIR">3. External Interface Requirements</a>
+                       </li>
+                       <div id="EIR" class="collapse hide" data-parent="#contents">
+                           <div class="navdrop">
+                         <li><a class= "sub-link" href="#3.1">3.1 User Interfaces</a></li>  
+                         <li><a class= "sub-link" href="#3.2">3.2 Hardware Interfaces</a></li>  
+                         <li><a class= "sub-link" href="#3.3">3.3 Software Interfaces</a></li>  
+                         <li><a class= "sub-link" href="#3.4">3.4 Communication Interfaces</a></li>  
+                           </div>
+                       </div>
+       
+                       <li class="nav-menu">
+                           <a class= "nav-link" data-toggle="collapse" href="#SF">4. System Features</a>
+                       </li>
+                       <div id="SF" class="collapse hide" data-parent="#contents">
+                           <div class="navdrop">
+                         <li><a class= "sub-link" href="#4.1">4.1 User Registration and Login</a></li>  
+                         <li><a class= "sub-link" href="#4.2">4.2 Classroom Create and Join</a></li> 
+                         <li><a class= "sub-link" href="#4.3">4.3 Assign Classroom materials</a></li>
+                         <li><a class= "sub-link" href="#4.4">4.4 Take Photograph and authentication</a></li>
+                         <li><a class= "sub-link" href="#4.5">4.5 Asking Questions</a></li>
+                          </div>
+                       </div>
+    
+                       <li class="nav-menu">
+                        <a class= "nav-link" data-toggle="collapse" href="#UC">5. Use Case Diagrams</a>
+                    </li>
+                    <div id="UC" class="collapse hide" data-parent="#contents">
+                        <div class="navdrop">
+                      <li><a class= "sub-link" href="#5.1">5.1 Extended Use Case (Signup)</a></li> 
+                      <li><a class= "sub-link" href="#5.2">5.2 Extended Use Case (Login)</a></li>
+                      <li><a class= "sub-link" href="#5.3">5.3 Extended Use Case (Edit Profile)</a></li>
+                      <li><a class= "sub-link" href="#5.4">5.4 Extended Use Case (Create Classroom)</a></li>
+                      <li><a class= "sub-link" href="#5.5">5.5 Extended Use Case (Generate Class Code)</a></li>
+                      <li><a class= "sub-link" href="#5.6">5.6 Extended Use Case (Send Invitation Code)</a></li>
+                      <li><a class= "sub-link" href="#5.7">5.7 Extended Use Case (Assign Pdf)</a></li>
+                      <li><a class= "sub-link" href="#5.8">5.8 Extended Use Case (Check Questions)</a></li>
+                      <li><a class= "sub-link" href="#5.9">5.9 Extended Use Case (View Reel of Images)</a></li> 
+                      <li><a class= "sub-link" href="#5.10">5.10 Extended Use Case (Join Classroom)</a></li>
+                      <li><a class= "sub-link" href="#5.11">5.11 Extended Use Case (View Tasks and Deadlines)</a></li>
+                      <li><a class= "sub-link" href="#5.12">5.12 Extended Use Case (File Zoom In and Zoom out)</a></li>
+                      <li><a class= "sub-link" href="#5.13">5.13 Extended Use Case (Record Questions)</a></li>
+                      <li><a class= "sub-link" href="#5.14">5.14 Extended Use Case (User Verification)</a></li>
+                      <li><a class= "sub-link" href="#5.15">5.15 Extended Use Case (Face Recognition)</a></li>
+                      <li><a class= "sub-link" href="#5.16">5.16 Extended Use Case (Take Photograph)</a></li> 
+                      <li><a class= "sub-link" href="#5.17">5.17 Extended Use Case (Store Images)</a></li> 
+                      <li><a class= "sub-link" href="#5.18">5.18 Extended Use Case (Index All Records)</a></li> 
+
+                       </div>
+                    </div>
+       
+                       <li class="nav-menu">
+                           <a class= "nav-link" data-toggle="collapse" href="#ONR">6. Other Nonfunctional Requirements</a>
+                       </li>
+                       <div id="ONR" class="collapse hide" data-parent="#contents">
+                           <div class="navdrop">
+                         <li><a class= "sub-link" href="#6.1">6.1 Performance Requirements</a></li>  
+                         <li><a class= "sub-link" href="#6.2">6.2 Safety Requirements</a></li>  
+                         <li><a class= "sub-link" href="#6.3">6.3 Security Requirements</a></li>  
+                         <li><a class= "sub-link" href="#6.4">6.4 Software Quality Attributes</a></li>
+                         <li><a class= "sub-link" href="#6.5">6.5 Business Rules</a></li>  
+                           </div>
+                       </div>
+       
+                       <li class="nav-menu">
+                           <a class= "nav-link" href="#OR">7. Other Requirements</a>
+                       </li>
+                       <li class="nav-menu">
+                           <a class= "nav-link" href="#AA">Appendix A: Glossary</a>
+                       </li>
+                       <li class="nav-menu">
+                           <a class= "nav-link" href="#AB">Appendix B: Analysis Models</a>
+                       </li>
+                       <li class="nav-menu">
+                           <a class= "nav-link" href="#AC">Appendix C: To Be Determined List</a>
+                       </li>
+                   </ul>             
+               </div>
+               </div>
+               
+             </section>
+        <!-- Navigation Ends Here-->    
+        </div>
+         
+        <!--Main Context-->
+        <div class= "main">
+            <div class="context">
+            <!--Cover Page Starts Here-->
+            <div class= "title-content">
+                <div class="srs-cover">
+                    <h1 class="bar"></h1>
+                    <section id="cov">
+                        <h1 class="SRS">Software Requirements <br>Specification<br><br></h1>
+                    </section>
+                        <h3 class="for">for</h3><br>
+                        <h2 class="SRS">Learning Management System</h2><br>
+                    <br><br>
+                        <p><br>Version 1.0 approved<br><br>
+                            <br>Prepared By<br>
+                            <br>Sonia Tasmin - 1811608042<br>
+                            <br>Md.Tawfiq-Uz-Zaman - 1812832042<br>
+                            <br>N M Rifat Rahman -1812817042<br><br>
+                            <br>Group - 5 <br>
+                            17 July,2021
+                        </p>        
+                </div>       
+            </div>
+            <!--Cover Page Ends Here-->
+    
+            <!--Table of Contents Starts Here-->
+            <div class= "title-content">
+                <section id="con">
+                    <h3 class="TOC_h3"> Table of Contents</h3>
+        
+                        <ol class="c">
+                        <li>Cover</li>
+                        <li>Table of contents</li>
+                        <li>1.Introduction</li>
+                        </ol>
+        
+                        <ul class="a">
+                        <li>1.1 Purpose</li>
+                        <li>1.2 Document Conventions</li>
+                        <li>1.3 Intended Audience and Reading Suggestions</li>
+                        <li>1.4 Product Scope</li>
+                        <li>1.5 References</li>
+                        </ul>
+                        <ol class="c">
+                        <li>2.Overall Description</li>
+                        </ol>
+        
+                        <ul class="a">
+                        <li>2.1 Product Perspective.</li>
+                        <li>2.2 Product Functions</li>
+                        <li>2.3 User Classes and Characteristics</li>
+                        <li>2.4 Operating Environment</li>
+                        <li>2.5 Design and Implementation Constraints</li>
+                        <li>2.6 User Documentation</li>
+                        <li>2.7 Assumptions and Dependencies</li>
+                        </ul>
+        
+                        <ol class="c">
+                        <li>3.External Interface Requirements</li>
+                        </ol>
+                        <ul class="a">
+                        <li>3.1 User Interfaces</li>
+                        <li>3.2 Hardware Interfaces</li>
+                        <li>3.3 Software Interfaces</li>
+                        <li>3.4 Communications Interface</li>
+                        </ul>
+        
+                        <ol class="c">
+                        <li>4.System Features</li>
+                        
+                        </ol>
+        
+                        <ul class="a">
+                        <li>4.1 System Feature 1 </li>
+                        <li>4.2 System Feature 2 (and so on)</li>       
+        
+                        </ul>
+        
+                        <ol class="c">
+                        <li>5.Use Case diagram</li>              
+                        </ol>
+        
+                        <ul class="a">
+                            <li>5.1 Extended Use Case (Signup)</li> 
+                            <li>5.2 Extended Use Case (Login)</li>
+                            <li>5.3 Extended Use Case (Edit Profile)</li>
+                            <li>5.4 Extended Use Case (Create Classroom)</li>
+                            <li>5.5 Extended Use Case (Generate Class Code)</li> 
+                            <li>5.6 Extended Use Case (Send Invitation Code)</li>
+                            <li>5.7 Extended Use Case (Assign Pdf)</li>
+                            <li>5.8 Extended Use Case (Check Questions)</li>
+                            <li>5.9 Extended Use Case (View Reel of Images)</li>
+                            <li>5.10 Extended Use Case (Join Classroom)</li> 
+                            <li>5.11 Extended Use Case (View Tasks and Deadlines)</li>
+                            <li>5.12 Extended Use Case (File Zoom In and Zoom out)</li> 
+                            <li>5.13 Extended Use Case (Record Questions)</li>
+                            <li>5.14 Extended Use Case (User Verification)</li> 
+                            <li>5.15 Extended Use Case (Face Recognition)</li>
+                            <li>5.16 Extended Use Case (Take Photograph)</li>                            
+                            <li>5.17 Extended Use Case (Store Images)</li>                            
+                            <li>5.18 Extended Use Case (Index All Records)</li>  
+                        </ul>
+        
+                        <ol class="c">
+                        <li>6.Other Nonfunctional Requirements</li>
+                       </ol>
+        
+                        <ul class="a">
+        
+                        <li>6.1 Performance Requirements</li>
+                        <li>6.2 Safety Requirements</li>
+                        <li>6.3 Security Requirements</li>
+                        <li>6.4 Software Quality Attributes</li>
+                        <li>6.5 Business Rules</li>
+                        </ul>
+
+                        <ol class="c">
+                        <li>7.Other Requirements</li>
+                        <li>Appendix A: Glossary</li>
+                        <li>Appendix B: Analysis Models</li>
+                        <li>Appendix C: To Be Determined List</li>
+                        </ol>
+                </section> 
+            </div>
+            <!--Table of Contents Ends Here-->
+    
+            <!--Revision History Starts Here-->
+            <div class= "title-content">
+                <section id= RevHis>
+                    <h5 class="sub-titles">Revision History </h5>
+            
+                <table class="dyn">
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Reason for changes</th>
+                        <th>Version</th>
+                    </tr>
+                    <tr>
+                        <td>   
+                        </td>
+                        <td>     
+                        </td>
+                        <td>       
+                        </td>
+                        <td>             
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table> <br>
+                </section>
+            </div>
+            <!--Revision History Ends Here-->
+    
+            <!-- Introduction Starts Here-->
+            <div>
+                
+                    <section id="Intro">   
+                    </section>   
+                <div class= "title-content">                   
+                            <section id="1.1">
+                                <h3 class="intro_titles">1. Introduction </h3> <br>
+                                <h5 class="sub-titles"> 1.1 Purpose </h5>
+                            </section>
+                                <p class="body"> This document will provide a comprehensive description of Learning Management System. The purpose of this document is to provide work analysis of the system features and interface.
+                                </p>
+                </div>
+
+                <div class= "title-content">
+                    <section id="1.2">
+                        <h5 class="sub-titles"> 1.2 Document Conventions </h5>
+                    </section> 
+                        <p class="body">We’re following the IEEE standards in writing this SRS document. Every 
+                            requirement statement is to have its own priority.
+                        </p>
+                </div>
+                
+                <div class= "title-content">
+                    <section id="1.3">
+                        <h5 class="sub-titles">1.3 Intended Audience and Reading Suggestions</h5>
+                    </section>
+                        <p class="body">This document is restricted to developers and coworkers.
+                        </p>
+                </div> 
+                
+                <div class= "title-content">
+                    <section id="1.4">
+                        <h5 class="sub-titles"> 1.4 Product Scope </h5>
+                    </section> 
+                        <p class="body">Learning Management System is an online teaching platform. Its purpose is to provide a common platform between teachers and students. All the possible teaching material will be provided in the platform.  Teachers can create classroom and the system will generate a classroom code. Students can join classroom using classroom code. Teachers can also assign class materials. Students can preview the class materials. Students can ask questions in different ways(written and verbal). System can identify students via video authentication.  
+                        </p> <br>
+                </div>
+                <div class= "title-content">
+                    <section id="1.4">
+                        <h5 class="sub-titles"> 1.5 References </h5>
+                    </section> 
+                        <p class="body">N/A </p> <br>
+                </div>
+            </div>
+             <!--Introduction Ends Here-->
+    
+             <!--Overall Description Starts Here-->
+             <div>
+               
+                    <section id="Overall_Des">
+                    </section> 
+                <div class= "title-content">
+                            <section id="2.1">
+                                <h3 class="titles">2. Overall Description </h3> <br>
+                                 <h5 class="sub-titles">2.1 Product Perspective.</h5>
+                            </section>
+                                <p  class="body"> The system is a new product and self-contained product. It consists of a website and a mobile app integrated to a database. The database stores following information.  </p>
+                                <b>Teacher details:</b>
+                                <p class="body">It includes the name, email of a teacher, along with the listed students to a specific teacher.</p>
+                                <b>Student details:</b>
+                                <p class="body">It includes username, first name, last name of a student along with their enroll courses. </p>
+                            </div>
+                
+                <div class= "title-content">
+                    <section id="2.2">
+                        <h5 class="sub-titles">2.2 Product Functions</h5>
+                    </section>
+                        <h6 class= "bullet-heads"> The Cryo has the following functionalities: </h6>
+                           <ul class="bullets">
+                               <li>Teacher Registration</li>
+                               <li>Teacher Login </li>
+                               <li>Student Registration </li>
+                               <li>Student Login </li>
+                               <li>Teachers can create classroom </li>
+                               <li>Teachers can add students to classroom </li>
+                               <li>Student can record questions </li>
+                               <li>System can take photograph of students and verify them</li>
+                            </ul>
+                </div>     
+                       
+                <div class= "title-content">
+                    <section id="2.3">
+                        <h5 class="sub-titles">2.3 User Classes and Characteristics</h5>
+                    </section>
+                    <table class="dyn">
+                        <tr>
+                            <th>Teacher</th>
+                            <td>Can create class, assign students to a classroom and provide teaching materials.</td>
+                        </tr>
+                        <tr>
+                            <th>Student</th>
+                            <td>Can preview classroom materials and zoom-in and zoom-out materials.</td>
+                        </tr>
+                        <tr>
+                            <th>System</th>
+                            <td>Controls authentication, data storage, indexing</td>
+                        </tr>
+                    </table> <br>
+                </div>    
+                       
+                <div class= "title-content">
+                    <section id="2.4">
+                        <h5 class="sub-titles">2.4 Operating Environment</h5>
+                    </section>
+                            <ul class="bullets">
+                               <li>Operating System: Windows/Android</li>
+                               <li>Platform: Website and Android application</li>
+                               <li>Database: MySQL </li>
+                               <li>Client/server system </li>
+                                <li>Languages: Java, Python</li>
+                                <li>Framework: Django</li>
+                            </ul>
+                </div>   
+                       
+                <div class= "title-content">
+                    <section id="2.5">
+                        <h5 class="sub-titles">2.5 Design and Implementation Constraints </h5>
+                    </section>
+                    <ul class="bullets">
+                        <li>Using a framework</li>
+                        <li>Using Java/Kotlin for the app</li>
+                        <li>Designing by firebase</li>
+                     </ul>
+                </div>
+                        
+                <div class= "title-content">
+                    <section id="2.6">
+                        <h5 class="sub-titles">2.6 User Documentation </h5>
+                    </section>
+                        <p  class="body">N/A</p>
+                </div>       
+                        
+                <div class= "title-content">
+                    <section id="2.7">
+                        <h5 class="sub-titles">2.7 Assumptions and Dependencies </h5>
+                    </section>
+                            <ul class="bullets">
+                               <li>Full functional rest API</li>
+                               <li>Implementing libraries </li>
+                               <li>Availability of resources</li>
+                            </ul> <br>   
+                </div>       
+             </div>
+             <!--Overall Description Ends Here-->
+    
+             <!--External Interface Requirements Starts Here-->
+             <div>
+                    <section id="EIR">
+                    </section> 
+                <div class= "title-content">
+                  <section id="3.1">
+                     <h3 class="titles">3. External Interface Requirements </h3><br>
+                     <h5 class="sub-titles"> 3.1 User Interfaces </h5>
+                  </section>
+                     <ul class="bullets">
+                          <li>Operating System: Windows/Android</li>
+                          <li>Front-end: HTML, CSS, bootstrap, Java </li>
+                          <li>Back-end: Python, Django, phpMyAdmin </li>
+                     </ul>
+                </div>
+               
+                <div class= "title-content">
+                    <section id="3.2">
+                        <h5 class="sub-titles">3.2 Hardware Interfaces </h5>					
+                     </section>
+                     <p  class="body">The system does not require any hardware interfaces. </p>
+                </div>
+
+                <div class= "title-content">
+                    <section id="3.3">
+                        <h5 class="sub-titles">3.3 Software Interfaces </h5> <br>
+                     </section>
+                        <table class="dyn">
+                            <tr>
+                                <th>Operating System</th>
+                                <th>Framework </th>
+                                <th>Database  </th>
+                            </tr>
+                            <tr>
+                                <td>Android, Windows</td>
+                                <td>Django</td>
+                                <td>MySQL</td>
+                            </tr>
+                        </table> <br>
+                </div>
+            
+                <div class= "title-content">
+                    <section id="3.4">
+                        <h5 class="sub-titles">3.4 Communications Interface </h5>
+                     </section>
+                        <p  class="body">This software supports all types of web browsers and doesn't require any special communication method.</p> <br>
+                </div>
+             </div>
+            <!--External Interface Requirements Ends Here-->
+    
+            <!--System Features Starts Here-->
+            <div>
+                
+                    <section id="SF">
+                    </section> 
+                <div class= "title-content">
+                    <section id="4.1">
+                        <h3 class="titles">4. System Features</h3><br>
+                        <h5 class="sub-titles"> 4.1  User Registration and Login</h5>
+                    </section>
+                            <h6 class="pre-title">4.2.1 Priority: HIGH</h6>
+                                 <p  class="body"> Description: Upon visiting the website, the user can browse through the list of items<br></p>
+                             <h6 class="pre-title">4.1.2 Stimulus/Response Sequences</h6>
+                                <ul class="bullets">
+                                    <li>Enter the app or website</li> 
+                                    <li>Register into app or website.</li>
+                                    <li>If already a registered user, then login</li>
+                                    <li>Autheticate users and then redirect to homepage</li>
+                                </ul>
+                                <h6 class="pre-title">4.1.3 Fucntional Requirements</h6>
+                                <ul class="bullets">
+                                    <li>Incorrect login information will prompt the system to the user to enter correct credentials.</li> 
+                                    
+                                </ul>
+                </div>
+                
+                <div class= "title-content">
+                    <section id="4.2">
+                        <h5 class="sub-titles">4.2 Classroom create and join</h5>
+                    </section>
+                            <h6 class="pre-title">4.2.1 Priority: HIGH</h6>
+                                <ul class="bullets">
+                                    <li> Description: Teacher can create classroom. Teacher can share classroom code with students and students can join classroom. Classroom details will be saved on database.  </li>
+                                </ul>
+                             <h6 class="pre-title"> 4.2.2 Stimulus/Response Sequences</h6>	
+                                <ul class="bullets">          
+                                    <li>Teacher will click on the create classroom button</li>
+                                    <li>System will generate unique classroom code </li>
+                                    <li>Using the classroom code students can join the classroom.</li>
+                                </ul>
+                                <h6 class="pre-title">4.1.3 Fucntional Requirements</h6>
+                                <ul class="bullets">
+                                    <li>If classroom code is invalid system prompts students to enter correct classroom code.</li> 
+                                    
+                                </ul>
+                </div>
+               
+                <div class= "title-content">
+                    <section id="4.3">
+                        <h5 class="sub-titles">4.3 Assign classroom materials</h5>
+                    </section>
+                            <h6 class="pre-title"> 4.3.1 Priority: LOW</h6>
+                            <p  class="body"> Description: Teachers can assign reading materials in classroom. Registered users can view reading materials by clicking on it. </p>
+                     
+                            <h6 class="pre-title">4.3.2 Stimulus/Response Sequences</h6> 
+                               <ul class="bullets">             
+                                    <li>Login to the system </li>                            
+                                    <li>Teachers assigning materials</li>  
+                                    <li>Registered users can preview the materials</li>                       
+                                </ul>
+                                <h6 class="pre-title">4.1.3 Fucntional Requirements</h6>
+                                <ul class="bullets">
+                                    <li>If login credentials are invalid system prompts user to enter correct credentials.</li>
+                                    <li>If no materials are provided the section will be empty. </li> 
+                                    
+                                </ul>
+                </div>
+                
+                <div class= "title-content">
+                    <section id="4.4">
+                        <h5 class="sub-titles">4.4 Take Photograph and authentication</h5>
+                    </section>
+                            <h6 class="pre-title"> 4.4.1 Priority: HIGH</h6>
+                                <ul class="bullets">
+                                    <li> Description: System will take photograph of student within a time interval. The photograph will be saved on database and the saved photograph will be used to authenticate students. </li>
+                                </ul>
+                   
+                             <h6 class="pre-title">4.4.2 Stimulus/Response Sequences</h6>
+                                <ul class="bullets">
+                                    <li>Login to the app/website </li>               
+                                    <li>Click on the reading materials  </li>
+                                    <li>System takes photograph of the student</li>
+                                    <li>Authenticate the student</li>
+                                </ul>
+                                <h6 class="pre-title">4.1.3 Fucntional Requirements</h6>
+                                <ul class="bullets">
+                                    <li>If login credentials are invalid system prompts user to enter correct credentials.</li>
+                                    <li>If the server fails to function the system would wait for the server to recover.</li> 
+                                    
+                                </ul>
+                </div>
+                
+                <div class= "title-content">
+                    <section id="4.5">
+                        <h5 class="sub-titles">4.5 Asking Questions</h5>
+                    </section>
+                            <h6 class="pre-title"> 4.5.1 Priority: MEDIUM</h6>
+                                <ul class="bullets">
+                                    <li> Description: Student can ask questions in various ways. Questions can be asked verbally, written down or tagged in a particular part of the material.</li>
+                                </ul>
+                    
+                            <h6 class="pre-title">4.5.2 Stimulus/Response Sequences</h6>
+                                <ul class="bullets">
+                                    <li>Login to the system</li>
+                                    <li> Click on the reading material</li>
+                                    <li>Ask questions in any preferrable way</li>    
+                                </ul>
+                                <h6 class="pre-title">4.1.3 Fucntional Requirements</h6>
+                                <ul class="bullets">
+                                    <li>If login credentials are invalid system prompts user to enter correct credentials.</li>
+                                    <li>If the server fails to function the system would wait for the server to recover.</li> 
+                                    
+                                </ul>                                
+                </div>
+
+            </div>
+            <!--System Features Ends Here-->
+    
+            <!--Extended Use Case Diagrams Starts Here-->
+            <div>
+                <section id="UC">
+                </section>  
+                <div class= "title-content">
+                    <section id="5"><h3 class="titles">5. Use Case Diagrams</h3>
+                        <img src="images/Teacher UCD.png" alt="Use case diagram 1">
+                        <img src="images/Student UCD.PNG" alt="Use case diagram 2">
+                        <img src="images/System UCD.PNG" alt="Use case diagram 3">
+                        <br></div>
+                    
+                    <div class= "title-content">
+                        <section id="5.1">
+                            <h5 class="sub-titles">5.1 Extended Use Case (Signup)</h5>
+                        </section>
+                        </section>
+                        <table class="dyn">
+                            <tr>
+                                <th>Name</th>
+                                <th>Actors </th>
+                                <th>Type </th>
+                            </tr>
+                            <tr>
+                                <td>Signup</td>
+                                <td>Teacher, Student </td>
+                                <td>Primary </td>
+                            </tr>
+                        </table>
+                        <br>
+                        <p class="body"><b>Brief Description: Both teachers and students can signup to the system. There will be seperate signup options for teachers and students.</b></p>
+                        </div>
+                        <div class= "title-content">
+                        <h6><b> Typical course of events: </b></h6>
+        
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td>1. Teacher/student opens application or the website. </td>
+                                    <td>2.	System responses with a sign up form</td>
+                                </tr>
+                                <tr>
+                                    <td>3.	Teacher/student puts his name, email, password and contact details(a recent photo for student) in the disguised field and enter Signup. </td>
+                                    <td>4.	System verifies and  opens home page.</td>
+                                </tr>
+                            </table>
+                        <br>
+                        </div>
+                    <div class= "title-content">
+                        <h6 class="pre-title"><b>Alternative Course of Events</b></h6>
+                                    <ul class="bullets">
+                                        <li>1.1 System doesn’t start due to malfunction or system maintenance. Shows apology message.
+                                        </li> 
+                                        <li>3.1 Teacher/student enters wrong information or wrong format while signup. System shows validation message/ error message.</li>
+                                    </ul>
+                    </div>
+                    
+
+                
+                <div class= "title-content">
+                    <section id="5.2">
+                        <h5 class="sub-titles">5.2 Extended Use Case (Login)</h5>
+                    </section>
+                        <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>Login</td>
+                                    <td>Teacher, Student </td>
+                                    <td>Primary </td>
+                                </tr>
+                        </table>
+                        <br>
+                        <p class="body"><b>Brief Description:</b> Upon registering with the system, teachers and students can login to access the features of the system. There will be login form using which the teachers and students can log in to the system.</b> </p>
+                </div>
+                <div class= "title-content">        
+                        <h6><b>Typical course of events:</b></h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td>1.	Teacher/student opens application or the website.  </td>
+                                    <td>2.	System responses with a login page</td>                            
+                                </tr>
+                                <tr>
+                                    <td>3.	Teacher/student puts his email and password in the disguised field and enter login. </td>
+                                    <td>4.	System verifies and  opens home page.</td>                            
+                                </tr>         
+                            </table>
+                            <br>
+                </div>
+                <div class= "title-content">
+                            <h6 class="pre-title"><b>Alternative Course of Events</b></h6>
+                            <ul class="bullets">
+                                <li>1.1 System doesn’t start due to malfunction or system maintenance. Shows apology message.
+                                </li> 
+                                <li>3.1 Teacher/student enters wrong information while login. System shows validation message/ error message.</li>
+                                <li>3.2 login details don’t match that on the record. Shows option for ‘forgot password’.</li>
+                            </ul>
+                </div>
+                
+                <div class= "title-content">
+                    <section id="5.3">
+                        <h5 class="sub-titles">5.3 Extended Use Case (Edit Profile)</h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>                            
+                                </tr>
+                                <tr>
+                                    <td>Edit Profile</td>
+                                    <td>Teacher,Student </td>
+                                    <td>Secondary </td>
+                                </tr>                       
+                            </table>
+                            <br>
+                        <p class="body"><b>Brief Description:</b> All users will have the option to edit their profile. By selecting this option, the users can modify their personal information and profile image. Upon submitting the edits, the information will also be updated in the database. </p>
+                </div>
+                <div class= "title-content">
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>                           
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1.	In the home page Teacher/student select profile.</td>
+                                    <td>2.	System responses profile page with edit option.</td>                            
+                                </tr>
+                                <tr>
+                                    <td>3.	Teacher/student edits its desired field and save</td>
+                                    <td>4.	System saves the edited information.</td>                            
+                                </tr>
+                            </table>
+                        <br>
+                </div>
+                <div class= "title-content">
+                        <h6 class="pre-title">Alternative Course of Events</h6>
+                        <ul class="bullets">
+                            <li>[login]</li>
+                            <li>4.1 System couldn’t save the edited information due to malfunction or system maintenance. </li> 
+                        </ul>
+                </div>
+               
+                <div class= "title-content">
+                    <section id="5.4">
+                        <h5 class="sub-titles">5.4 Extended Use Case (Create Classroom)</h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>                            
+                                </tr>
+                                <tr>
+                                    <td>Create Classroom</td>
+                                    <td>Teacher </td>
+                                    <td>Secondary </td>
+                                </tr>                        
+                            </table>
+                        <br>
+                        <p class="body">The teacher will have the option to create a classroom for his/her students. To create a classroom, all the teacher needs is to give a unique classroom name.</p>
+                    </div>
+               
+                    <div class= "title-content">
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>                   
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1.	In the home page Teacher selects  ‘Create classroom’.</td>
+                                    <td>2.	System responses with a form to create a classroom.</td> 
+                                </tr>                
+                                <tr>
+                                    <td>3.	Teacher fill up the form and enter ‘Create classroom’</td>
+                                    <td>4.	System saves the information and creates a new classroom.</td>
+                                </tr>
+                            </table>
+                        <br>
+                </div>               
+            <div class= "title-content">
+                <h6 class="pre-title">Alternative Course of Events</h6>
+                        <ul class="bullets">
+                            <li>[login]</li>
+                            <li>3.1 Teacher/student enters wrong information/wrong format in the form. System shows validation message/ error message.</li>
+                            <li>1 System couldn’t create new classroom due to malfunction or system maintenance. </li>
+                        </ul>
+                </div>
+
+                               <div class= "title-content">
+                    <section id="5.5">
+                        <h5 class="sub-titles">5.5 Extended Use Case (Generate Class Code)</h5>
+                    </section>
+                        <table class="dyn">
+                            <tr>
+                                <th>Name</th>
+                                <th>Actors </th>
+                                <th>Type </th>
+                            </tr>
+                            <tr>
+                                <td>Generate Class Code</td>
+                                <td>System, Teacher, Student </td>
+                                <td>secondary </td>
+                            </tr>
+                        </table>
+                    <br>
+                    <p class="body">Brief Description: When the teacher generates a class code, a unique code is generated by the system. This code is to be used by the student to access their respective classrooms.</p>
+                </div>
+                <div class= "title-content">
+                    <h6>Typical course of events:</h6>
+                        <table class="dyn">
+                            <tr>
+                                <th>Actor Action</th>
+                                <th>System Response </th>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">[login]</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">[create classroom]</td>
+                            </tr>
+                            <tr>
+                                <td>1.  After successfully creating the class teacher has to press the “generate class code button</td>
+                                <td>2.	System will use a random number generator to generate a random code consisting of letter and digits </td> 
+                            </tr>                
+                        </table>
+                    <br>
+                </div>
+
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>2.1 Due to server error the generated code cannot be displayed to the teacher. </li>
+                    </ul>
+            </div>
+                <div class= "title-content">
+                    <section id="5.6">
+                        <h5 class="sub-titles">5.6 Extended Use Case (Send Invitation Code)</h5>
+                    </section>
+                        <table class="dyn">
+                            <tr>
+                                <th>Name</th>
+                                <th>Actors </th>
+                                <th>Type </th>
+                            </tr>
+                            <tr>
+                                <td>Send Invitation code</td>
+                                <td>Teacher </td>
+                                <td>secondary </td>
+                            </tr>
+                        </table>
+                    <br>
+                    <p class="body">Brief Description: The teacher has to generate a unique code consisting of digits and letters. A student must use this unique code to enroll in the classroom. The teacher has to send out the invitation code via email/SMS. </p>
+                </div>
+                <div class= "title-content">
+                    <h6>Typical course of events:</h6>
+                        <table class="dyn">
+                            <tr>
+                                <th>Actor Action</th>
+                                <th>System Response </th>
+                            </tr>
+                            <tr>
+                                <td colspan="2" align="center">[login]</td>
+                            </tr>
+                            <tr>
+                                <td>1.	In the classroom Teacher select ‘classroom code’ and copy.</td>
+                                <td>2.	System holds the copied code. </td> 
+                            </tr>                
+                            <tr>
+                                <td>3.	Teacher  sends the code to students</td>
+                                <td>4.	System sends message to desired destination.</td>
+                            </tr>
+                        </table>
+                    <br>
+                </div>
+
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>2.1 System couldn’t copy code due to malfunction or system maintenance. </li>
+                        <li>4.1 System couldn’t send message due to malfunction or system maintenance. </li>
+                    </ul>
+            </div>
+    
+                <div class= "title-content">
+                    <section id="5.7">
+                        <h5 class="sub-titles">5.7 Extended Use Case (Assign pdf)</h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>Assign pdf</td>
+                                    <td>Teacher </td>
+                                    <td>secondary </td>
+                                </tr>
+                            </table>
+                        <br>
+                        <p class="body">Brief Description: The teacher must assign a pdf to the students. This pdf cannot be downloaded. The students can view the pdf in their browser/mobile one page at a time.</p>
+                   </div>
+                   <div class= "title-content">
+                        
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1.	In the classroom page Teacher select ‘add pdf’.</td>
+                                    <td>2.	System responses with a form to add pdf.</td>
+                                </tr>                
+                                <tr>
+                                    <td>3.	Teacher add pdf, add deadline and upload. </td>
+                                    <td>4.	System uploads the pdf.</td>
+                                </tr>
+                            </table>
+                        <br>
+                </div>
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>4.1 System couldn’t upload pdf information due to malfunction or system maintenance.
+                        </li>
+                    </ul>
+            </div>
+                <div class= "title-content">
+                    <section id="5.8">
+                        <h5 class="sub-titles">5.8 Extended Use Case (Check question)</h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>Check Questions</td>
+                                    <td>Teacher </td>
+                                    <td>secondary </td>
+                                </tr>
+                            </table>
+                        <br>
+                        <p class="body">Brief Description: The student can ask questions related to the document. The teacher can check these questions in any sorting order.</p>
+                   </div>
+                   <div class= "title-content">
+                        
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1.	In the home page teacher goes to a classroom</td>
+                                    <td>2.	System shows reading materials </td>
+                                </tr>                
+                                <tr>
+                                    <td>3.	teacher selects a material to view or read. </td>
+                                    <td>4.	system will display the material with ques tagged to it.</td>
+                                </tr>
+                                <tr>
+                                    <td>5. teacher sees the ques or listen to it</td>
+                                </tr>
+                            </table>
+                        <br>
+                </div>
+
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>2.1 shows no reading material in the classroom if not assigned or because of malfunction/maintenance
+                        </li>
+                        <li>4.1 System couldn’t show question if students didn’t ask or due to malfunction or system maintenance.</li>
+                        <li>5.1 Students voice was not clear so teacher couldn’t understand it</li>
+                    </ul>
+            </div>
+                            <div class= "title-content">
+                    <section id="5.9">
+                        <h5 class="sub-titles">5.9 Extended Use Case (View Reel of Images)</h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>View Reel of images</td>
+                                    <td>Teacher </td>
+                                    <td>secondary </td>
+                                </tr>
+                            </table>
+                        <br>
+                        <p class="body">Brief Description: When the student views a document, the system will automatically take photographs. The teacher can view these reel of images. </p>
+                   </div>
+                   <div class= "title-content">
+                        
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1.  The teacher selects the classroom he wants </td>
+                                    <td>2.	2.	The system redirects the teacher to the requested classroom </td>
+                                </tr>                
+                                <tr>
+                                    <td>3.	The teacher selects the “View student reels” option from his classroom </td>
+                                    <td>4.	The system presents a menu where all the reels are located as a unified list. The teacher may choose to sort them in any of the following ways: By student, By material.</td>
+                                </tr>
+                                <tr>
+                                    <td>5.	The teacher selects the sort type for viewing the reels</td>
+                                    <td>6.	The system sorts the list of the reels based on the choice of the teacher</td>
+                                </tr>
+                                <tr>
+                                    <td>7.	The teacher can select any reel he wishes to see.</td>
+                                    <td>8.	The system will display the reel one image at a time. There will be a navigation arrow to cycle through the pictures in the reel.</td>
+                                </tr>
+                            </table>
+                        <br>
+                </div>
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>8.1	In case of any malfunction (camera/records) the system cannot show all the images that were originally in the reel.
+                        </li>
+                    </ul>
+            </div>
+                
+                <div class= "title-content">
+                    <section id="5.10">
+                        <h5 class="sub-titles">5.10 Extended Use Case (Join classroom)</h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>Join classroom</td>
+                                    <td>Student </td>
+                                    <td>Secondary </td>
+                                </tr>
+                            </table>
+                        <br>
+                        <p class="body">Brief Description: The student must join a classroom using the unique class code. Upon joining the classroom the student will be able to access all the features of the learning management system.</p>
+                </div>
+                
+                <div class= "title-content">
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1.	In the home page student selects  ‘join classroom’.</td>
+                                    <td>2.	System responses with a field to write desired classroom code</td>
+                                </tr>                
+                                <tr>
+                                    <td>3.	student type code and enter ‘join classroom’</td>
+                                    <td>4.	System adds the new classroom to the home page</td>
+                                </tr>
+                            </table>
+                        <br>
+                </div>
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>3.1 student enters wrong code in the field. System shows error message.
+                        </li>
+                        <li>4.1 System couldn’t add the new classroom due to malfunction or system maintenance. </li>
+                    </ul>
+            </div>
+
+                
+                <div class= "title-content">
+                    <section id="5.11">
+                        <h5 class="sub-titles">5.11 Extended Use Case (view tasks and deadlines) </h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>View tasks and deadlines</td>
+                                    <td>student</td>
+                                    <td>secondary </td>
+                                </tr>
+                            </table>
+                        <br>
+        
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1.	In the home page student goes to a classroom </td>
+                                    <td>2.	System shows reading tasks and deadlines on a per-class basis and also as a unified list</td>
+                                </tr>
+                                <tr>
+                                    <td>3.	Student selects a task to view or read.</td>
+                                    <td>4.	system will open and display the material with deadline</td>
+                                </tr>
+                            </table>
+                        <br>
+                </div>
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>8.1	In case of any malfunction (camera/records) the system cannot show all the images that were originally in the reel.
+                        </li>
+                        
+                    </ul> 
+                </div>
+                <div class= "title-content">
+                    <section id="5.12">
+                        <h5 class="sub-titles">5.12 Extended Use Case (File zoom in and zoom out) </h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>File zoom in and zoom out</td>
+                                    <td>student</td>
+                                    <td>secondary </td>
+                                </tr>
+                            </table>
+                        <br>
+        
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1.	In the home page student goes to a classroom</td>
+                                    <td>2.	System shows reading tasks and deadlines on a per-class basis and also as a unified list</td>
+                                </tr>
+                                <tr>
+                                    <td>3.	Student selects a task to view or read.</td>
+                                    <td>4.	system will open and display the material with deadline</td>
+                                </tr>
+                                <tr>
+                                    <td> </td>
+                                    <td>5. Material will be presented one page/slide/content-group at a time</td>
+                                </tr>
+                                <tr>
+                                    <td>6. Students zoom in and out the material</td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        <br>
+                </div> 
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>2.1 shows no reading material in the classroom as teacher didn’t assign or because of malfunction/maintenance
+                        </li>
+                        <li>4.1 System couldn’t show pdf or deadline classroom due to malfunction or system maintenance.</li>
+                        <li>6.1 Students zoom in and out the material due to malfunction or system maintenance.</li>
+                    </ul> 
+                </div> 
+                                
+                <div class= "title-content">
+                    <section id="5.13">
+                        <h5 class="sub-titles">5.13 Extended Use Case (Record Questions) </h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>Record questions</td>
+                                    <td>student</td>
+                                    <td>secondary </td>
+                                </tr>
+                            </table>
+                        <br>
+        
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1.	In the home page student goes to a classroom</td>
+                                    <td>2.	System shows reading tasks and deadlines on a per-class basis and also as a unified list</td>
+                                </tr>
+                                <tr>
+                                    <td>3.	Student selects a task to view or read.</td>
+                                    <td>4.	System will open and display the material with options to ask question</td>
+                                </tr>
+                                <tr>
+                                    <td>5. Student selects ask question</td>
+                                    <td>6. system shows option to write down question or ask verbally.</td>
+                                </tr>
+                                <tr>
+                                    <td>7. Student selects to write questions down</td>
+                                    <td>8. System responses with a field to write questions down</td>
+                                </tr>
+                                <tr>
+                                    <td>9. Student write a questions</td>
+                                    <td>10. System records it</td>
+                                </tr>
+                                <tr>
+                                    <td>11. Student selects to ask questions verbally.</td>
+                                    <td>12. System responses with an option to ask questions verbally</td>
+                                </tr>
+                                <tr>
+                                    <td>13. Student asks the questions verbally</td>
+                                    <td>14. System records it</td>
+                                </tr>
+                            </table>
+                        <br>
+                </div> 
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>2.1 shows no reading material in the classroom as teacher didn’t assign or because of malfunction/maintenance
+                        </li>
+                        <li>4.1 System couldn’t show pdf or deadline classroom due to malfunction or system maintenance.</li>
+                        <li>6.1 Students voice was not clear so system couldn’t record it</li>
+                    </ul> 
+                </div> 
+                                
+                <div class= "title-content">
+                    <section id="5.14">
+                        <h5 class="sub-titles">5.14 Extended Use Case (User Verification) </h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>User Verification</td>
+                                    <td>System</td>
+                                    <td>Primary </td>
+                                </tr>
+                            </table>
+                        <br>
+        
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td>1.	Teacher/student opens application or the website. </td>
+                                    <td>2.	System responses with a login page</td>
+                                </tr>
+                                <tr>
+                                    <td>3.	Teacher/student enters create account</td>
+                                    <td>4.	System responses with the option to log in with google account option</td>
+                                </tr>
+                                <tr>
+                                    <td>5.	Teacher/student selects login with option and enters his credential</td>
+                                    <td>6.	System contacts with google to verify the account information. </td>
+                                </tr>
+                            </table>
+                        <br>
+                </div>  
+                                
+                <div class= "title-content">
+                    <section id="5.15">
+                        <h5 class="sub-titles">5.15 Extended Use Case (Face Recognition) </h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>Face Recognition</td>
+                                    <td>System</td>
+                                    <td>secondary </td>
+                                </tr>
+                            </table>
+                        <br>
+        
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1. In the home page Student goes to a select a classroom</td>
+                                    <td>2.	System shows the selected classroom to the student</td>
+                                </tr>
+                                <tr>
+                                    <td>3.	Student selects a task to view or read.</td>
+                                    <td>4.	System will open and display the material with options to ask question</td>
+                                </tr>
+                                <tr>
+                                    <td>5. Student has to turn on his/her camera </td>
+                                    <td>6. System accesses the students’ profile and fetches the profile image</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>7. System uses a facial recognition model that tracks whether the person in front of the camera is the student or not</td>
+                                </tr>
+                            </table>
+                        <br>
+                </div> 
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>3.1 Student cannot open the file in case of the file being corrupted.
+                        </li>
+                        <li>4.1 The system fails to show the file requested due to server error or file corruption</li>
+                        <li>5.1 Students’ camera is malfunctioning in which case a report will be sent to the teacher stating that the student failed to turn on his/her camera due to equipment malfunction</li>
+                        <li>6.1 The system cannot find any profile image in the event the student took down the image from their profile.</li>
+                        <li>7.1 The system cannot use the profile image of the student due to poor image quality</li>
+                    </ul> 
+                </div> 
+                                
+                <div class= "title-content">
+                    <section id="5.16">
+                        <h5 class="sub-titles">5.16 Extended Use Case (Take Photograph) </h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>Take Photograph</td>
+                                    <td>System</td>
+                                    <td>Secondary </td>
+                                </tr>
+                            </table>
+                        <br>
+        
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1.  The student selects the material he/she wants to view that is assigned to him/her.</td>
+                                    <td>2.	The system brings up the material requested by the student and follows up with a prompt to allow the system to use the camera/ webcam.</td>
+                                </tr>
+                                <tr>
+                                    <td>3.	The student allows the system to use their camera</td>
+                                    <td>4.	The system accesses the students’ camera. Then takes images at regular intervals</td>
+                                </tr>
+                            </table>
+                        <br>
+                </div> 
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>2.1 The system can’t find the material that the student has requested due to server error/file corruption  
+                        </li>
+                        <li>3.1	If the student has no access to the camera, they can’t give the system the access for taking photos. </li>
+                        <li>3.2	If the student doesn’t allow the system to take pictures of them during viewing a document, a notice will be sent notifying the teacher about it.</li>
+                    </ul> 
+                </div> 
+
+                <div class= "title-content">
+                    <section id="5.17">
+                        <h5 class="sub-titles">5.17 Extended Use Case (Store Images) </h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>Store Images</td>
+                                    <td>System</td>
+                                    <td>Secondary </td>
+                                </tr>
+                            </table>
+                        <br>
+        
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>1. The system will store the taken images under the students’ records.</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>2.	These records will be visible to the teacher in the form of reels.</td>
+                                </tr>
+                            </table>
+                        <br>
+                </div> 
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>1.1	If the student refuses to turn on the camera/ has some malfunction on their respective devices, the system cannot take the pictures hence no storage action will occur. 
+                        </li>
+                        <li>2.1 In the event of no photos being stored the teacher will see an error message saying “no images found”</li>
+                    </ul> 
+                </div> 
+
+                <div class= "title-content">
+                    <section id="5.18">
+                        <h5 class="sub-titles">5.18 Extended Use Case (Index All Records) </h5>
+                    </section>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Actors </th>
+                                    <th>Type </th>
+                                </tr>
+                                <tr>
+                                    <td>Index all records</td>
+                                    <td>System</td>
+                                    <td>Secondary </td>
+                                </tr>
+                            </table>
+                        <br>
+        
+                        <h6>Typical course of events:</h6>
+                            <table class="dyn">
+                                <tr>
+                                    <th>Actor Action</th>
+                                    <th>System Response </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" align="center">[login]</td>
+                                </tr>
+                                <tr>
+                                    <td>1.  The teacher can choose to view the records of the students in any form of indexing</td>
+                                    <td>2. The system will index the system in any one of the following formats: Alphabetical, by date, by task completion, by class. </td>
+                                </tr>
+                                <tr>
+                                    <td>3.	The teacher can choose any of the indexing when viewing records </td>
+                                    <td>4.	The system will display the records according to the indexing chosen by the teacher.</td>
+                                </tr>
+                            </table>
+                        <br>
+                </div> 
+                <div class= "title-content">
+                    <h6 class="pre-title">Alternative Course of Events</h6>
+                    <ul class="bullets">
+                        <li>[login]</li>
+                        <li>2.1 The system cannot sort the results properly due to improper formatting of the records. So. Records should be kept consistent.
+                        </li>
+                        
+                    </ul> 
+                </div>
+            </div>
+            <!--Extended Use Case Diagrams Ends Here-->
+    
+            <!--Other NonFuntional Requirements Starts Here-->
+            <div>
+                <div class= "title-content">
+                    <section id="ONR">
+                    </section>	
+                    
+                    <section id="6.1">
+                        <h3 class="titles">6. Other Nonfunctional Requirements</h3><br>
+                        <h5 class="sub-titles">6.1 Performance Requirements </h5>
+                    </section>        
+                        <p class="body"> It provides a detailed analysis of the user interaction with the software and measurements placed on the system performance. The performance requirements are:
+                        </p>
+                             <ul class="bullets">
+                                <li>The software will load and be usable within 3 seconds to make it more flexible</li>
+                                <li>The software will update the interface depending on any interactions within 2 seconds for a good performance speed</li>
+                                <li>The database will be normalized to prevent redundant data and improve performance</li>
+                        </ul>
+                </div>
+                
+                <div class= "title-content">
+                    <section id="6.2">
+                        <h5 class="sub-titles">6.2 Safety Requirements</h5>
+                    </section>
+                         <p class="body">To ensure that there is no loss of data due to any external or internal issues, the data will be stored in cloud storages. This allows a safe storage as well as easy accessibility</p>	
+                </div>
+                   
+                <div class= "title-content">
+                    <section id="6.3">
+                        <h5 class="sub-titles">6.3 Security Requirements</h5>
+                    </section>
+                        <p class="body">The system will not disclose any personal information about the users/clients. The software will not grant any access to an unauthorized user and will not communicate with any other software or devices during its usage. The image reels that will be taken when the student views a document will only be accessible by the teacher associated with that student. No other user will have access to those images. </p>
+                        
+                </div>
+                
+                <div class= "title-content">
+                    <section id="6.4">
+                        <h5 class="sub-titles">6.4 Software Quality Attributes</h5>
+                    </section>
+                        <ul class="bullets">
+                            <li>AVAILABILITY: The website is accessible as both a desktop version and as an android version. It is very user-friendly and easy to handle.</li>
+                            <li>RELIABILITY: The website will ensure no data is leaked. All images and personal information will be handled with care.</li>
+                            <li>FLEXIBILITY: As it is user-friendly, the student will be able to manage their classes and the progression of their reading easily. No complex operations will be required to manage their reading materials. The teacher can also access the records of the students in whatever form he wants. The sorting options will ensure that the teacher can get to where he wants easily and without any complications.</li>
+                            <li>USABILITY: Users with basic English knowledge will be able to access this website and use it easily.</li>
+                        </ul>
+                </div>
+                      
+                <div class= "title-content">
+                    <section id="6.5"> 
+                        <h5 class="sub-titles">6.5 Business Rules</h5>
+                      </section>
+                        <p class="body">This is a free software and will not endorse any adverts.</p>
+                </div>
+                   
+              </div>
+            <!--Other NonFuntional Requirements Ends Here-->
+    
+            <!--Other Requirements Starts Here-->
+            <div>
+                <div class= "title-content">
+                    <section id="OR">
+                        <h3 class="titles">7. Other Requirements</h3>
+                    </section>
+                         <p class="body"> N/A</p> 
+                </div>            
+            </div>
+            <!--Other Requirements Ends Here-->
+    
+            <!--Appendix Starts Here-->
+            <div>
+                <div class= "title-content">
+                    <section id="AA">
+                        <h3 class="titles">Appendix A: Glossary</h3>
+                    </section>
+                        
+                        <table class="dyn">
+                            <tr>
+                                <th>Framework</th>
+                                <th>Backend </th>
+                            </tr>
+                            <tr>
+                                <td>It helps to build the project compactly as possible. Puts all the tools together for better managing the project </td>
+                                <td>The behind-the-scenes part of the project. The user never sees this part. The developers that manage the system has access to it and can make change to the program accordingly to the demand.</td>
+                            </tr>
+                        </table>
+                        <br>
+                    <section id="AB">
+                            <h3 class="titles">Appendix B: Analysis Models</h3>
+                    </section>
+                             <p class="body">  N/A</p>               
+                       <br>
+                       
+                    <section id="AC">
+                            <h3 class="titles"> Appendix C: To Be Determined List</h3>
+                    </section>
+                            <p class="body">N/A</p>
+                </div>       
+            </div>
+            <!--Appendix Ends Here-->     
+            </div>
+        </div>
+    </div>
+</body>
